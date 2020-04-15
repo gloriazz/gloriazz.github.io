@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>patterns</title>
+	<style>
+		body {
+			border: 1.5px solid #f6c83f;
+			background-image: url("bg2.png");
+			background-size: cover;
+		height: 100%;
+		overflow: hidden}
+	
+.button {
+  padding-left: 2px;
+	padding-right: 2px;
+	  text-align: center;
+  text-align: center;
+  display: inline-block;
+	margin-right: 1px;
+	margin-left: 5px;
+  font-size: 9px;
+  cursor: pointer;
+  background-color: white; 
+  color: #8f4791; 
+  border: 1.5px solid #f6c83f;
+	width: 17px;
+}
+		.pointer{
+			position: absolute;
+			width: 5%;
+			height: 5%;
+			background-image: url("trail.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			transform: translate(-50,-50);
+			pointer-events: none;
+			box-sizing: border-box;
+		}
+		.pointer2{
+			transition:0.07s;
+		}
+		.pointer3{
+			transition: 0.14s;
+		}
+		.pointer4{
+			transition: 0.21s;
+		}
+		.pointer5{
+			transition: 0.28s
+		}
+		.pointer6{
+			transition: 0.35s;
+		}
+		.pointer7{
+			transition: 0.42s;
+		}
+			.pointer8{
+			transition: 0.49s;
+		}
+		.pointer9{
+			transition: 0.57s
+		}
+		.pointer10{
+			transition: 0.63s;
+		}
+		.pointer11{
+			transition: 0.70s;
+		}
+			.pointer12{
+			transition:0.77s;
+		}
+		.pointer13{
+			transition: 0.84s;
+		}
+		.pointer14{
+			transition: 0.91s;
+		}
+		.pointer15{
+			transition: 0.98s
+		}
+		.pointer16{
+			transition: 1.05s;
+		}
+		.pointer17{
+			transition: 1.12s;
+		}
+			.pointer18{
+			transition: 1.19s;
+		}
+		.pointer19{
+			transition: 1.26s
+		}
+		.pointer20{
+			transition: 1.33s;
+		}
+		.pointer21{
+			transition: 1.40s;
+		}
+</style>
+</head>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* The browser window */
+
+.row {
+  padding: 5px;
+}
+
+/* Create three unequal columns that floats next to each other */
+.columnleft{
+  float: right;
+}
+
+.left {
+  width: 12%;
+}
+
+.right {
+  width: 10%;
+}
+
+.middle {
+  width: 75%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+	.sticky {
+  position: fixed;
+  padding-top: 5px;
+  width: 100%;
+		 float: right;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+	float: right;
+}
+	.columnright{
+		font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+		font-weight: 500;
+		letter-spacing: 3px;
+		color: #f6c83f;
+		margin-left: 3px;
+	}
+	.container{
+		border: 1.5px solid #f6c83f;
+		margin: 3px;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	p{
+		color: white;
+		font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+		font-weight: 400;
+	}
+	.definition{
+		width: 55%;
+		margin: 10px;
+		margin-bottom: 30%;
+	margin-left: 30px;}
+
+	
+</style>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="columnleft" id="myheader">
+      <button class="button">-</button>
+<button class="button">□</button>
+<button class="button"><span class="close" onclick="self.close()">&times;</span></button>
+		
+    </div>
+	  <div class="columnright">  MILLEFLEUR</div></div></div>
+   <div class="definition"><p>▶ having an allover pattern of small flowers and plants</p><br><p>
+	   ▶ came directly from French into English in the 18th century as a word for a perfume distilled from several different kinds of flowers. 
+	  <br><br> ▶ The literal meaning of "mille fleur" is "a thousand flowers," so it is easy to see how "millefleur" came to be applied to patterns or backgrounds of many tiny flowers or plants. </p>
+  
+	</div>
+	<div class="trail"></div>
+	<div class="pointer"></div>
+	<div class="pointer pointer2"></div>
+	<div class="pointer pointer3"></div>
+	<div class="pointer pointer4"></div>
+	<div class="pointer pointer5"></div>
+	<div class="pointer pointer6"></div>
+	<div class="pointer pointer7"></div>
+	<div class="pointer pointer8"></div>
+	<div class="pointer pointer9"></div>
+	<div class="pointer pointer10"></div>
+	<div class="pointer pointer11"></div>
+	<div class="pointer pointer12"></div>
+	<div class="pointer pointer13"></div>
+	<div class="pointer pointer14"></div>
+	<div class="pointer pointer15"></div>
+	<div class="pointer pointer16"></div>
+	<div class="pointer pointer17"></div>
+	<div class="pointer pointer18"></div>
+	<div class="pointer pointer19"></div>
+	<div class="pointer pointer20"></div>
+	<div class="pointer pointer21"></div>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript"> $(document).mousemove (function(e){$('.pointer').css({left:e.pageX, top:e.pageY})})</script>
+	
+<script>
+	window.onscroll = function() {myFunction()};
+
+var columnleft = document.getElementById("myheader");
+var sticky = columnleft.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    columnleft.classList.add("sticky");
+  } else {
+    columnleft.classList.remove("sticky");
+  }
+}
+</script>
+</body>
+</html>
